@@ -1,0 +1,10 @@
+.showcase{background:#f9fbf6;color:#18251e}
+.showcase main{max-width:none;padding:12px}
+.showcase main>small,.showcase main>h1,.showcase main p:not([role]){display:none}
+.showcase .stage,.showcase .source{border-color:#cad7cd}
+.showcase .source{background:#eef3ec}
+.showcase .toolbar{margin:0 0 10px}
+.showcase button{background:#e0eee4;color:#17432f}
+.showcase canvas{height:clamp(220px,70vh,530px)}
+.showcase .controls{margin-top:9px}
+.showcase #failMsg:empty{display:none}
