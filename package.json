@@ -1,0 +1,25 @@
+{
+  "name": "motionmaid",
+  "version": "0.2.0",
+  "description": "Export a motion script as a standalone interactive 3D viewer",
+  "type": "module",
+  "bin": {
+    "motionmaid": "./cli.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "cli.mjs",
+    "runtime.mjs",
+    "renderer.txt",
+    "examples",
+    "THREE-LICENSE.txt"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EOMZON/motionmaid.git"
+  },
+  "homepage": "https://eomzon.github.io/motionmaid/"
+}

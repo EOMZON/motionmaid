@@ -1,0 +1,50 @@
+%% 游泳示例：自由泳（示意，没有经过游泳教练校对）。ground off 让身体悬空
+motion
+title 自由泳划臂（示例）
+group 游泳 Swimming
+tempo 46
+length 4
+ground off
+ease smooth
+note 两臂交替划水，身体绕长轴转动，第 4 拍向右侧换气；打腿每半拍换一次
+
+beat 1 : 右手入水向前伸，左手推水到大腿旁
+  root y=0.85 pitch=90 yaw=90 twist=0
+  spine yaw=0
+  head 0
+  shoulder L=0/12 R=180/10
+  elbow L=20 R=8
+  hand both=flat
+  ankle both=-55
+  toe both=-10
+  knee both=12
+  hip L=12/4 R=-10/4
+beat 1.5
+  hip L=-10/4 R=12/4
+beat 2 : 右手抱水下压，左手出水向前移臂
+  root twist=-32
+  spine yaw=-8
+  shoulder L=-90/28 R=90/10
+  elbow L=100 R=90
+  hip L=12/4 R=-10/4
+beat 2.5
+  hip L=-10/4 R=12/4
+beat 3 : 左手入水向前伸，右手推水到大腿旁
+  root twist=0
+  spine yaw=0
+  shoulder L=180/10 R=0/12
+  elbow L=8 R=20
+  hip L=12/4 R=-10/4
+beat 3.5
+  hip L=-10/4 R=12/4
+beat 4 : 左手抱水，右手出水移臂，头向右转换气
+  root twist=32
+  spine yaw=8
+  head yaw=-65
+  shoulder L=90/10 R=-90/28
+  elbow L=90 R=100
+  hip L=12/4 R=-10/4
+beat 4.5
+  hip L=-10/4 R=12/4
+beat 4.7 : 头转回水下
+  head yaw=0

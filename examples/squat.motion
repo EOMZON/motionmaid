@@ -1,0 +1,34 @@
+%% 健身示例：徒手深蹲。没写踝角度，ground on + feet flat 让脚掌一直平贴地面
+motion
+title 徒手深蹲（示例）
+group 健身 Fitness
+tempo 30
+length 4
+ground on
+feet flat
+ease snap
+view side
+note 两拍蹲下、两拍站起；膝盖跟脚尖同向
+
+beat 1 : 站直，脚与肩同宽，核心收紧
+  root pitch=4
+  spine 0
+  head 0
+  hip both=4/12/22
+  knee both=2
+  shoulder both=4/10
+  elbow both=12
+  hand both=soft
+  muscle glmax=0.2 quad=0.25
+  label quad.L
+beat 3 : 臀部向后坐，大腿接近水平，背保持中立
+  root pitch=40
+  spine -10
+  head -24
+  hip both=124/16/22
+  knee both=116
+  shoulder both=118/6
+  elbow both=4
+  hand both=flat
+  muscle glmax=0.95 quad=0.95
+  label glmax.L
