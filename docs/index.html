@@ -15,7 +15,7 @@ p,li{color:var(--muted)}section{padding:30px 0 48px;border-bottom:1px solid var(
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.styles{grid-template-columns:repeat(3,minmax(0,1fr))}
 article,figure,pre{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 article,pre,figcaption{padding:16px}figure img{width:100%;display:block}figcaption span{display:block;color:var(--muted);font-size:14px}
-pre{overflow:auto}code{color:#eee1ff}small{color:var(--muted)}@media(max-width:650px){.grid,.styles{grid-template-columns:1fr}}
+.demo{width:100%;height:clamp(560px,83vh,850px);display:block;border:1px solid var(--line);border-radius:12px;background:var(--bg)}.presets{columns:2;padding-left:1.2em}@media(max-width:650px){.presets{columns:1}}pre{overflow:auto}code{color:#eee1ff}small{color:var(--muted)}@media(max-width:650px){.grid,.styles{grid-template-columns:1fr}}
 </style></head>
 <body>
 <nav aria-label="主导航"><strong>Motionmaid</strong><div><a href="#styles">视觉风格</a> · <a href="#install">安装</a> · <a href="https://github.com/EOMZON/motionmaid">GitHub</a></div></nav>
@@ -23,7 +23,7 @@ pre{overflow:auto}code{color:#eee1ff}small{color:var(--muted)}@media(max-width:6
 <header>
 <p class="eyebrow">开源工具 · CLI 0.2.0</p><h1>Motionmaid</h1><p class="lead">用代码展示 3D 人体动作与肌群变化</p>
 <p>定义关键帧、节奏和关节角度，生成可以旋转、拖进度、查看肌群高亮的交互 HTML。分享给别人后，浏览器就能打开。</p>
-<div class="actions"><a class="button primary" href="squat.html">看徒手深蹲 →</a><a class="button" href="swim.html">看自由泳与源码 →</a></div>
+<div class="actions"><a class="button primary" href="#muscles">操作徒手深蹲 ↓</a><a class="button" href="#swim">看自由泳与源码 ↓</a></div>
 </header>
 <section aria-labelledby="capabilities"><h2 id="capabilities">动作、肌群、呈现</h2>
 <div class="grid">
@@ -32,20 +32,30 @@ pre{overflow:auto}code{color:#eee1ff}small{color:var(--muted)}@media(max-width:6
 <article><h3>源码和画面用同一份动作</h3><p>纯预览适合直接分享。源码对照可以一边查看动作文件，一边拖动播放器看姿势。默认纯预览，导出时加 <code>--code</code> 可默认打开源码面板。</p></article>
 <article><h3>一个文件离线分享</h3><p>CLI 把动作、人体网格、播放器和 Three.js 一起写入 HTML。接收者需要支持 WebGL 的浏览器，打开文件即可播放。</p></article>
 </div></section>
-<section id="muscles"><h2>同一姿势，肌群层开与关</h2><p>徒手深蹲，第 2.95 拍。去掉肌群层后，可以专注看髋、膝和躯干的姿势。</p>
-<div class="grid">
-<figure><img loading="lazy" src="styles/aura.jpg" alt="同一深蹲姿势，显示肌群"><figcaption>显示肌群示意</figcaption></figure>
-<figure><img loading="lazy" src="styles/aura-no-muscles.jpg" alt="同一深蹲姿势，隐藏肌群"><figcaption>只看人体动作</figcaption></figure>
-</div></section>
-<section id="styles"><h2>同一拍，六种视觉呈现</h2><p>下方都是 CLI 实际渲染的同一个深蹲姿势。风格会改变材质、轮廓、背景和肌群配色。播放数据不变，肌群也可以独立隐藏。</p>
-<div class="grid styles">
-<figure><img loading="lazy" src="styles/aura.jpg" alt="紫晶风格下的深蹲"><figcaption><strong>紫晶 · Aurora</strong><span>紫色人体，肌群由浅紫过渡到暖桃色。</span></figcaption></figure>
-<figure><img loading="lazy" src="styles/night.jpg" alt="紫夜风格下的深蹲"><figcaption><strong>紫夜 · Night</strong><span>深色舞台，柔光轮廓与渐变热色。</span></figcaption></figure>
-<figure><img loading="lazy" src="styles/anat.jpg" alt="写实风格下的深蹲"><figcaption><strong>写实 · Realistic</strong><span>中性人体材质，冷暖肌群颜色对照。</span></figcaption></figure>
-<figure><img loading="lazy" src="styles/holo.jpg" alt="全息风格下的深蹲"><figcaption><strong>全息 · Holo</strong><span>青色边缘光，肌群从蓝绿过渡到浅黄。</span></figcaption></figure>
-<figure><img loading="lazy" src="styles/ink.jpg" alt="霓虹风格下的深蹲"><figcaption><strong>霓虹 · Neon</strong><span>深底与色块，突出高饱和肌群配色。</span></figcaption></figure>
-<figure><img loading="lazy" src="styles/bone.jpg" alt="骨白风格下的深蹲"><figcaption><strong>骨白 · Bone Study</strong><span>浅底和清晰轮廓，方便对照姿态。</span></figcaption></figure>
-</div></section>
+<section id="muscles">
+<h2>徒手深蹲 · 直接操作</h2>
+<p>点击播放，或把进度拖到下蹲阶段。暂停后切换「肌群示意」，就能在同一个姿势下比较人体轮廓和肌群高亮。拖动画面可以旋转视角。</p>
+<iframe class="demo" src="squat.html" title="交互式徒手深蹲播放器"></iframe>
+<p><a href="squat.html">单独打开深蹲播放器 ↗</a></p>
+</section>
+<section id="styles">
+<h2>同一拍，六种视觉呈现</h2>
+<p>在<a href="#muscles">上方播放器</a>暂停任意一拍，再从「风格」菜单切换。姿势和播放进度会保留，可以直接比较实时渲染效果。</p>
+<ul class="presets">
+<li><strong>紫晶：</strong>紫色人体与暖桃色肌群。</li>
+<li><strong>紫夜：</strong>深色舞台与渐变热色。</li>
+<li><strong>写实：</strong>中性人体材质与冷暖对照。</li>
+<li><strong>全息：</strong>青色边缘光和蓝绿高亮。</li>
+<li><strong>霓虹：</strong>深底和高饱和肌群色块。</li>
+<li><strong>骨白：</strong>浅底和清晰的人体轮廓。</li>
+</ul>
+</section>
+<section id="swim">
+<h2>自由泳 · 动作与源码对照</h2>
+<p>播放器默认显示只读源码。播放或拖动进度时，可以对照脚本中的拍点、左右臂与躯干姿态。</p>
+<iframe class="demo" src="swim.html" title="交互式自由泳播放器与动作源码" loading="lazy"></iframe>
+<p><a href="swim.html">单独打开自由泳播放器 ↗</a></p>
+</section>
 <section><h2>从脚本到每一帧</h2>
 <p>解析动作脚本 → 插值关节轨道 → 求解 17 根骨骼 → 驱动约 3.7 万顶点的连续皮肤 → 用 WebGL 着色器绘制肌群。动作、肌群覆盖层和视觉风格共用同一帧数据，可以分别控制。</p>
 <p>公开 CLI 现支持关节关键帧。完整的 Roya 工坊还展示脚步求解、逐帧数据导入导出、部位标签、轨迹和练习呈现。这里的两个独立播放器聚焦通用动作的制作与分享。</p>

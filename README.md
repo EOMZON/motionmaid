@@ -14,7 +14,7 @@
 | 视觉风格 | 紫晶、紫夜、写实、全息、霓虹、骨白，改变材质、边缘光、背景和肌群配色 | 各预设还可包含地面、反射及舞台环境 |
 | 预览与分享 | 纯预览、只读源码对照、独立离线 HTML，支持播放、进度定位、旋转和缩放 | 动作工坊提供编辑与实时预览 |
 
-[深蹲 · 纯预览](https://eomzon.github.io/motionmaid/squat.html) · [自由泳 · 源码对照](https://eomzon.github.io/motionmaid/swim.html) · [同一姿势的六种真实渲染对照](https://eomzon.github.io/motionmaid/#styles)
+[深蹲 · 纯预览](https://eomzon.github.io/motionmaid/squat.html) · [自由泳 · 源码对照](https://eomzon.github.io/motionmaid/swim.html) · [实时切换六种渲染风格](https://eomzon.github.io/motionmaid/#styles)
 
 ## 安装和运行
 
