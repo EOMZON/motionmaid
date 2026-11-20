@@ -2,7 +2,19 @@
 
 用代码展示 3D 人体动作与肌群变化。可交互预览、源码对照、六种视觉风格。
 
-[在线演示](https://eomzon.github.io/motionmaid/) · [下载安装包](https://github.com/EOMZON/motionmaid/releases/latest)
+[GitHub Pages · 能力说明与交互演示](https://eomzon.github.io/motionmaid/) · [下载安装包](https://github.com/EOMZON/motionmaid/releases/latest)
+
+## 具体能力
+
+| 能力 | 公开 CLI 0.2.0 | Roya 原型补充 |
+| --- | --- | --- |
+| 动作编排 | 关键帧、节奏、关节角度与插值。提供深蹲和自由泳示例 | 脚步规则求解、逐帧骨骼数据导入与导出 |
+| 3D 人体 | Three.js + WebGL，17 根骨骼驱动约 3.7 万顶点的连续皮肤 | 分段人偶、轨迹、部位标签及更多舞台细节 |
+| 肌群高亮 | 25 组肌群，可在脚本指定强度与侧别，或使用动作规则估算。覆盖层可独立开关 | 部位标签、练习时聚焦一个部位 |
+| 视觉风格 | 紫晶、紫夜、写实、全息、霓虹、骨白，改变材质、边缘光、背景和肌群配色 | 各预设还可包含地面、反射及舞台环境 |
+| 预览与分享 | 纯预览、只读源码对照、独立离线 HTML，支持播放、进度定位、旋转和缩放 | 动作工坊提供编辑与实时预览 |
+
+[深蹲 · 纯预览](https://eomzon.github.io/motionmaid/squat.html) · [自由泳 · 源码对照](https://eomzon.github.io/motionmaid/swim.html) · [同一姿势的六种真实渲染对照](https://eomzon.github.io/motionmaid/#styles)
 
 ## 安装和运行
 
