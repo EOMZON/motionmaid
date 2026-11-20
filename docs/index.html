@@ -10,23 +10,22 @@
 <p class="lead">用代码展示 3D 人体动作与肌群变化</p>
 <p class="copy">把节奏、拍点和关节角度写进动作脚本。看人体怎么动，也看动作中哪些肌群被标亮。</p>
 <div class="actions"><a class="button primary" href="#muscles">看深蹲与肌群</a><a class="button" href="#styles">比较六种风格</a></div>
-</div><iframe class="demo hero-demo" src="squat.html?showcase=hero" title="实时播放的 3D 深蹲演示"></iframe></div></header>
+</div><div class="window"><div class="window-bar"><i></i><i></i><i></i><span>徒手深蹲 · 实时原型</span></div><iframe class="demo hero-demo" src="squat.html?showcase=hero" title="实时播放的 3D 深蹲演示"></iframe></div></div></header>
 <main class="wrap">
 <section id="muscles"><div class="section-head"><p class="kicker">肌群覆盖层</p><h2>同一个姿势，看轮廓，也看肌群</h2><p class="copy">以下是同一拍的深蹲。肌群层独立于动作，打开时可查看股四头肌、臀大肌等区域的高亮。强度可由脚本指定，也可由规则估算。</p></div>
-<div class="paired"><figure><img src="styles/aura-no-muscles.jpg" alt="关闭肌群高亮的深蹲"><figcaption>只看动作轮廓</figcaption></figure><figure><img src="styles/aura.jpg" alt="开启肌群高亮的同一深蹲姿势"><figcaption>加上肌群示意</figcaption></figure></div>
+<div class="paired"><figure><iframe class="live-tile" src="squat.html#showcase=tile&amp;style=aura&amp;muscles=off&amp;still=1" title="只看动作轮廓 · 3D 实时渲染" loading="lazy"></iframe><figcaption><strong>只看动作轮廓</strong></figcaption></figure><figure><iframe class="live-tile" src="squat.html#showcase=tile&amp;style=aura&amp;still=1" title="加上肌群示意 · 3D 实时渲染" loading="lazy"></iframe><figcaption><strong>加上肌群示意</strong></figcaption></figure></div>
 <p class="caption">高亮为动作示意，未经肌电测量或临床验证。首屏播放器可直接切换肌群。</p></section>
-<section id="styles"><div class="section-head"><p class="kicker">视觉风格</p><h2>同一段动作，六种渲染</h2><p class="copy">实时样机自动轮换六种风格，动作连续播放。下方同帧索引便于直接比较材质、轮廓与高亮配色。</p></div>
-<iframe class="demo style-demo" src="squat.html?showcase=styles" title="六种视觉风格自动轮换的实时播放器" loading="lazy"></iframe>
+<section id="styles"><div class="section-head"><p class="kicker">视觉风格</p><h2>同一段动作，六种渲染</h2><p class="copy">同一段深蹲由六套材质实时渲染。拖动画面可旋转，滚轮可以缩放。</p></div>
 <div class="gallery">
-<figure><img loading="lazy" src="styles/aura.jpg" alt="紫晶深蹲"><figcaption><strong>紫晶</strong><span>紫色人体与暖桃色高亮</span></figcaption></figure>
-<figure><img loading="lazy" src="styles/night.jpg" alt="紫夜深蹲"><figcaption><strong>紫夜</strong><span>深色舞台与渐变热色</span></figcaption></figure>
-<figure><img loading="lazy" src="styles/anat.jpg" alt="写实深蹲"><figcaption><strong>写实</strong><span>中性材质与冷暖肌群</span></figcaption></figure>
-<figure><img loading="lazy" src="styles/holo.jpg" alt="全息深蹲"><figcaption><strong>全息</strong><span>青色边缘光与蓝绿高亮</span></figcaption></figure>
-<figure><img loading="lazy" src="styles/ink.jpg" alt="霓虹深蹲"><figcaption><strong>霓虹</strong><span>深底与高饱和色块</span></figcaption></figure>
-<figure><img loading="lazy" src="styles/bone.jpg" alt="骨白深蹲"><figcaption><strong>骨白</strong><span>浅底与清晰人体轮廓</span></figcaption></figure>
+<figure><iframe class="live-tile" src="squat.html#showcase=tile&amp;style=aura" title="紫晶 · 3D 实时渲染" loading="lazy"></iframe><figcaption><strong>紫晶</strong><span>紫色人体与暖桃色高亮</span></figcaption></figure>
+<figure><iframe class="live-tile" src="squat.html#showcase=tile&amp;style=night" title="紫夜 · 3D 实时渲染" loading="lazy"></iframe><figcaption><strong>紫夜</strong><span>深色舞台与渐变热色</span></figcaption></figure>
+<figure><iframe class="live-tile" src="squat.html#showcase=tile&amp;style=anat" title="写实 · 3D 实时渲染" loading="lazy"></iframe><figcaption><strong>写实</strong><span>中性材质与冷暖肌群</span></figcaption></figure>
+<figure><iframe class="live-tile" src="squat.html#showcase=tile&amp;style=holo" title="全息 · 3D 实时渲染" loading="lazy"></iframe><figcaption><strong>全息</strong><span>青色边缘光与蓝绿高亮</span></figcaption></figure>
+<figure><iframe class="live-tile" src="squat.html#showcase=tile&amp;style=ink" title="霓虹 · 3D 实时渲染" loading="lazy"></iframe><figcaption><strong>霓虹</strong><span>深底与高饱和色块</span></figcaption></figure>
+<figure><iframe class="live-tile" src="squat.html#showcase=tile&amp;style=bone" title="骨白 · 3D 实时渲染" loading="lazy"></iframe><figcaption><strong>骨白</strong><span>浅底与清晰人体轮廓</span></figcaption></figure>
 </div></section>
 <section id="swim"><div class="section-head"><p class="kicker">动作与源码</p><h2>自由泳，每一拍怎么写</h2><p class="copy">源码对照默认打开。拖动进度，比较左右臂、躯干转动与打腿在不同拍点的变化。</p></div>
-<iframe class="demo" src="swim.html?showcase=code" title="自由泳实时播放器和动作源码" loading="lazy"></iframe></section>
+<div class="window"><div class="window-bar"><i></i><i></i><i></i><span>自由泳 · 动作源码</span></div><iframe class="demo" src="swim.html?showcase=code" title="自由泳实时播放器和动作源码" loading="lazy"></iframe></div></section>
 <section id="install"><div class="section-head"><p class="kicker">工程与交付</p><h2>从脚本到可分享的 HTML</h2></div>
 <div class="facts"><article class="fact"><h3>17 根骨骼</h3><p>解析脚本并插值关节轨道，驱动约 3.7 万顶点的连续人体皮肤。</p></article><article class="fact"><h3>25 组肌群</h3><p>WebGL 自定义着色器绘制肌群，强度和左右侧可以写入脚本。</p></article><article class="fact"><h3>单文件离线播放</h3><p>CLI 将动作、人体与播放器封装在 HTML 中，支持纯预览和只读源码对照。</p></article></div>
 <p class="copy">公开 CLI 支持关节关键帧。Roya 工坊另有脚步求解、逐帧数据导入导出、部位标签和轨迹。Node.js 20+ 可从 GitHub Release 安装 CLI。</p>

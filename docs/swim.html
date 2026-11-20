@@ -1183,6 +1183,11 @@ const source = JSON.parse($('motion-data').textContent);
   }, {passive:false});
   let previousWidth, previousHeight;
   function render(now) {
+    if (document.body.dataset.offscreen === 'true') {
+      last = now;
+      requestAnimationFrame(render);
+      return;
+    }
     if (playing && last !== undefined) beat = (beat + Math.min(.05,(now-last)/1000) * F.bpm / 60) % F.len;
     last = now;
     seek.value = beat;

@@ -12,3 +12,19 @@ pre{overflow:auto;padding:18px;border:1px solid var(--line);border-radius:12px;b
 @media(max-width:820px){.hero-inner{grid-template-columns:1fr;gap:24px}.gallery,.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.demo{height:730px}.hero-demo,.style-demo{height:475px}}
 @media(max-width:390px){.wrap{width:calc(100% - 26px)}.facts{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Match the portfolio story controls and prototype frames. */
+:root{--paper:#f6f7f3;--green:#1f7a4d;--dark:#11211a;--shadow:0 1px 2px #10281a0a,0 18px 48px -18px #103c2229}
+.kicker{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--muted)}
+.kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);flex:none}
+h1{font-size:clamp(44px,5.6vw,76px);letter-spacing:-.02em}.lead{font-size:clamp(24px,2.5vw,32px)}
+.actions{gap:12px;margin-top:28px}.button{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 24px;font:500 15px system-ui,sans-serif;transition:transform .4s,box-shadow .3s}.button:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.primary{background:var(--dark);border-color:var(--dark);color:#fff}
+.top nav{gap:4px}.top nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:99px;color:var(--muted);font-size:14px;text-decoration:none}.top nav a:hover{background:#eaf5ee;color:var(--dark)}
+.window{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--white);box-shadow:var(--shadow);min-width:0}
+.window-bar{display:flex;gap:6px;align-items:center;padding:11px 14px;border-bottom:1px solid var(--line);color:var(--muted);font-size:12px}
+.window-bar i{width:8px;height:8px;border-radius:50%;background:#ccd9cf}.window-bar span{margin-left:6px}
+.window .demo{border:0;border-radius:0;box-shadow:none}.hero-demo{height:510px}
+.live-tile{display:block;width:100%;height:clamp(175px,24vw,290px);border:0;background:#12151a}
+figure, .fact{border-radius:20px;box-shadow:var(--shadow)}
+@media(max-width:650px){.top nav a{padding:0 9px}.hero-demo{height:510px}.live-tile{height:200px}}
+@media(prefers-reduced-motion:reduce){.button{transition:none}}

@@ -8,3 +8,14 @@
 .showcase canvas{height:clamp(220px,70vh,530px)}
 .showcase .controls{margin-top:9px}
 .showcase #failMsg:empty{display:none}
+
+.showcase{background:#f6f7f3;color:#14181a}
+.showcase .toolbar{gap:8px}.showcase .toolbar label{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 12px;border:1px solid #d2dcd1;border-radius:99px}
+.showcase button{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:99px;background:#fbfcf8;color:#26372d;border:1px solid #d2dcd1;font:500 14px system-ui,sans-serif}
+.showcase #play,.showcase #source-toggle[aria-expanded="true"],.showcase .style-segments button[aria-pressed="true"]{background:#11211a;color:#fff;border-color:#11211a}
+.showcase .style-segments{display:flex;max-width:100%;overflow-x:auto;gap:2px;padding:4px;border-radius:99px;background:#f6f7f3;box-shadow:inset 0 0 0 1px #d2dcd1}
+.showcase .style-segments button{flex:none;background:transparent;border-color:transparent;padding:0 12px}
+.showcase input{accent-color:#1f7a4d}.showcase-hero canvas{height:clamp(210px,60vh,335px)}
+.showcase-tile main{padding:0}.showcase-tile .toolbar,.showcase-tile .controls{display:none}.showcase-tile .stage{border:0;border-radius:0}.showcase-tile canvas{height:100vh}
+
+.showcase .toolbar label[hidden]{display:none}
